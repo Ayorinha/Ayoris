@@ -1,0 +1,11 @@
+[project]
+name="ayoris"
+version="0.1.0"
+description="Ayoris engineering foundation"
+requires-python=">=3.11"
+dependencies=["fastapi>=0.115,<1"]
+[build-system]
+requires=["hatchling"]
+build-backend="hatchling.build"
+[tool.pytest.ini_options]
+addopts="-q"
