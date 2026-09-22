@@ -1,7 +1,8 @@
 from fastapi import FastAPI
-def create_app():
- app=FastAPI(title="Ayoris",version="0.1.0")
- @app.get("/health")
- def health():return {"status":"ok"}
- return app
-app=create_app()
+
+def create_app() -> FastAPI:
+    app = FastAPI(title="Ayoris", version="0.1.0")
+    @app.get("/health", tags=["system"])
+    async def health() -> dict[str, str]: return {"status": "ok"}
+    return app
+app = create_app()
